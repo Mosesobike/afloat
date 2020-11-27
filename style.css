@@ -10,30 +10,40 @@ main{
     min-height: 100vh;
     background: url("/images/men-standing.jpg");
     background-size: cover;
-    padding: 0rem 5rem;
-
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 10vh;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.061);
 }
 .nav-links{
     display: flex;
     list-style: none;
 }
 .nav-links li{
-    padding-left:10rem;
+    padding-left:7rem;
     font-size: 1.2rem;
     color: white;
-    font-weight: bolder;
+    font-weight:bolder;
+    cursor: pointer;
+    margin-right: 7rem;
+}
+.nav-links a:hover{
+    color: black;
+    text-decoration: underline black;
+    text-transform: uppercase;
 }
 .logo{
     font-family: "Lobster",cursive;
     font-weight: bolder;
     font-size: 2rem;
-    color: white;
+     color: white;
+    margin-left:2%;
 }
 .big-text{
     position: absolute;
@@ -54,15 +64,7 @@ nav{
     justify-content: center;
     align-items: center;
 }
-.slider{
-    background:rgb(135, 151,158);
-    position:fixed;
-    top: 0;
-    left:0;
-    height:100%;
-    width: 100%;
-    transform: translateY(100%);
-}
+
 .intro-text{
     color:white;
     font-family:"Heebo" ,sans-serif;
@@ -79,19 +81,123 @@ nav{
 .hamburger{
      display: none;
 }
+.shoe-text{
+    text-align: center;
+    font-family:"Lobster", cursive;
+    font-size: 3.3rem;
+    padding-top: 2%;
+}
+.s1{
+    background-color:rgba(128, 128, 128, 0.246);
+    padding-right: 4%;
+    padding-left: 4% ;
+    padding-bottom: 3%;
+}
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 6%;
+}
+.container{
+    perspective: 1000px;
+}
+.card{
+    transform-style: preserve-3d;
+    min-height:50%;
+    width:90%;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+    border-radius:30px;
+     padding: 0rem 5rem;
+    background: white;
+    padding-bottom:2%;
+}
+.sneakers{
+    min-height:35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+.sneakers img{
+    width: 18rem;
+    z-index: 2;
+}
+.circle{
+    width: 15rem;
+    height:15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245,70,66,0.75),
+        rgba(8,83,156,0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+.info h1{
+    font-size: 2rem;
+    font-family: "Poppins" sans-serif;
+    font-weight: bolder;
+}
+.info h3{
+    font-size: 15px;
+    padding:1rem 0rem;
+    color: black;
+    font-family: "Poppins" sans-serif;
+}
+.sizes{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.sizes button{
+    padding:0.7rem 1rem;
+    border: none;
+    background: none;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius:30px;
+    color: #585858;
+}
+button.active{
+    background: #585858; 
+    color: white;
+}
+.purchase{
+    margin: 2.5rem 0rem;
+    padding: 6% 0;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+}
+.purchase button{
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #585858 ;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
 @media screen and (max-width:768px) {
     nav{
         position: relative;
+        height:auto;
+        width:auto;
     }
-    .nav-links li a{
+    .nav-links li{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding:25%;
+        text-align: center;
+        padding-top: 12%;
     }
+    
     .nav-links li a{
         color: white;
+        padding-top:10%;
     }
     .hamburger{
         position: absolute;
@@ -110,22 +216,29 @@ nav{
         border-radius: 2px;
         z-index: 2;
     }
- .nav-links{
-     position:fixed;
-    flex-direction: column;
-    transition:all 1s ease;
-     padding: 5% !important;
-     margin: 5%;
+    .nav-links {
+        position:fixed;
+        background:black !important;
+         height:200px; 
+         width: 100%; 
+        flex-direction: column;
+        clip-path: circle(40px at 110% -10%) !important; 
+        -webkit-clip-path: circle(10px at 110% -10%) !important;
+        transition:all 1s ease;
     }
     .nav-links.open{
-        clip-path: circle(1000px at 110% -10%);
-        -webkit-clip-path: circle(1000px at 110% -10%);
+        clip-path: circle(1000px at 90% -10%) !important;
+         -webkit-clip-path: circle(1000px at 90% -10%) !important;
     }
     .landing{
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
             background-repeat: no-repeat;
+    }
+    .intro{
+        align-items: center;
+        text-align: center;
     }
   
 }
