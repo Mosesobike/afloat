@@ -12,13 +12,13 @@ main{
     background-size: cover;
 }
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex !important;
+     align-items: center;
+    justify-content: space-between !important;
     min-height: 10vh;
     position: fixed;
     z-index: 1;
-    width: 100%;
+    width:100%;
     background-color: rgba(128, 128, 128, 0.061);
 }
 .nav-links{
@@ -34,8 +34,8 @@ nav{
     margin-right: 7rem;
 }
 .nav-links a:hover{
-    color: black;
-    text-decoration: underline black;
+    color: black !important;
+    text-decoration: underline black !important;
     text-transform: uppercase;
 }
 .logo{
@@ -81,11 +81,12 @@ nav{
 .hamburger{
      display: none;
 }
-.shoe-text{
+.section-text{
     text-align: center;
     font-family:"Lobster", cursive;
     font-size: 3.3rem;
     padding-top: 2%;
+    color: white;
 }
 .s1{
     background-color:rgba(128, 128, 128, 0.246);
@@ -107,9 +108,9 @@ nav{
     min-height:50%;
     width:90%;
     box-shadow: 0 20px 20px rgba(0,0,0,0.2);
-    border-radius:30px;
+    border-radius:30px !important;
      padding: 0rem 5rem;
-    background: white;
+    background:white;
     padding-bottom:2%;
 }
 .sneakers{
@@ -128,22 +129,22 @@ nav{
     height:15rem;
     background: linear-gradient(
         to right,
-        rgba(245,70,66,0.75),
-        rgba(8,83,156,0.75)
+        rgba(63, 60, 60, 0.712),
+        rgba(247, 248, 250, 0.678)
     );
     position: absolute;
     border-radius: 50%;
     z-index: 1;
 }
 .info h1{
-    font-size: 2rem;
+    font-size: 2rem !important;
     font-family: "Poppins" sans-serif;
     font-weight: bolder;
 }
 .info h3{
     font-size: 15px;
     padding:1rem 0rem;
-    color: black;
+    color:white;
     font-family: "Poppins" sans-serif;
 }
 .sizes{
@@ -159,7 +160,7 @@ nav{
     font-weight: bold;
     cursor: pointer;
     border-radius:30px;
-    color: #585858;
+    color:black;
 }
 button.active{
     background: #585858; 
@@ -176,11 +177,53 @@ button.active{
     width: 100%;
     padding: 1rem 0rem;
     background: #585858 ;
-    color: white;
+    color:white;
     border: none;
     border-radius: 30px;
     font-weight: bolder;
     font-size: 20px;
+}
+.see-more{
+    color: black;
+    cursor: pointer;
+}
+.see-more a{
+    font-family: "poppins" sans-serif;
+}
+.s2{
+    background-color:black;
+    padding-right: 4%;
+    padding-left: 4% ;
+    padding-bottom: 3%;
+    color:white;
+}
+.acc-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.description{
+    width:45%;
+    align-items: center;
+    padding-top:8%;
+    justify-content: center;
+}
+.slide{
+    width: 47% !important; 
+    padding-top: 5%;
+}
+.img-slide{
+    border-radius: 6% !important;
+}
+.About{
+background:black;
+}
+.about-text{
+    padding:7%;
+    align-items: center;
+    color: white;
+}
+.contact{
+    background:black;
 }
 @media screen and (max-width:768px) {
     nav{
@@ -202,7 +245,7 @@ button.active{
     .hamburger{
         position: absolute;
         cursor: pointer;
-        right:-1%;
+        right:2%;
         top:25%;
         z-index: 2;
         pointer-events: all;
@@ -218,17 +261,22 @@ button.active{
     }
     .nav-links {
         position:fixed;
-        background:black !important;
          height:200px; 
          width: 100%; 
+         background:black ;
         flex-direction: column;
-        clip-path: circle(40px at 110% -10%) !important; 
-        -webkit-clip-path: circle(10px at 110% -10%) !important;
+        clip-path: circle(2px at 20% -10%); 
+        -webkit-clip-path: circle(2px at 20% -10%);
         transition:all 1s ease;
     }
     .nav-links.open{
-        clip-path: circle(1000px at 90% -10%) !important;
-         -webkit-clip-path: circle(1000px at 90% -10%) !important;
+        clip-path: circle(2px at 20% -10%);
+         -webkit-clip-path: circle(2px at 20 % -10%);
+    }
+    .big-text{
+        position: absolute;
+        font-size: 3rem;
+        justify-content: center;
     }
     .landing{
         background-size: cover;
@@ -240,5 +288,23 @@ button.active{
         align-items: center;
         text-align: center;
     }
-  
+  .card-container{
+      display: flex;
+      flex-direction: column;
+  }
+  .container{
+      padding-bottom: 2%;
+      padding-top: 1%;
+      width:100%;
+  }
+  .acc-container{
+      display: flex;
+      flex-direction: column;
+  }
+  .description{
+      width: 100%;
+  }
+  .slide{
+      width:100% !important;
+  }
 }
