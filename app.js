@@ -15,8 +15,4 @@ const links = document.querySelectorAll(".nav-links li");
 
 hamburger.addEventListener("click", () => {
     navlinks.classList.toggle("open");
-
 });
-
-   
-
